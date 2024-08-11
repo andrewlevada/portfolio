@@ -4,13 +4,14 @@ import { uiAndGraphics } from "@/content/ui-and-graphics";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-screen min-h-screen items-center px-[60px] pb-[100px] text-[#452405] bg-white">
-      <div className="flex flex-col gap-[80px] max-w-[1180px] items-center">
+    <main className="flex flex-col w-screen min-h-screen items-center p-[20px] text-black bg-white">
+      <div className="flex flex-col gap-[20px] w-full">
         <Hero/>
-        <ImageSection title="интерфейсы и графика" images={uiAndGraphics}/>
+        <ImageSection images={uiAndGraphics}/>
 
-        <div className="w-full h-[36px]">
-          <h1 className="opacity-60">это всё, спасибо</h1>
+        <div className="flex flex-row justify-between w-full pt-[160px]">
+          <h1>это всё, спасибо</h1>
+          <h1>👈(ﾟヮﾟ👈)</h1>
         </div>
       </div>
     </main>

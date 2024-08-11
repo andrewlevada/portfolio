@@ -16,20 +16,18 @@ export default {
     plugin(function({ addBase }) {
       addBase({
         'h1': {
-          fontFamily: '"PP Neue Montreal"',
+          fontFamily: 'var(--font-neue-montreal)',
           fontSize: "36px",
-          fontStyle: "normal",
           fontWeight: "400",
-          lineHeight: "105%",
-          letterSpacing: "-0.36px"
+          lineHeight: "100%",
+          letterSpacing: "-1.08px"
         },
         'p': {
-          fontFamily: '"PP Neue Montreal"',
-          fontSize: "16px",
-          fontStyle: "normal",
+          fontFamily: 'var(--font-neue-montreal)',
+          fontSize: "15px",
           fontWeight: "400",
-          lineHeight: "20px",
-          letterSpacing: "-0.16px"
+          lineHeight: "19px",
+          letterSpacing: "0.1px"
         }
       })
     })

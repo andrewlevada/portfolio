@@ -1,28 +1,57 @@
-import Image from "next/image";
 import Link from "next/link";
-import Button from "./ui/button";
+
+const texts = [{
+    text: (
+        <p>
+            я люблю создавать ценность и продукты, которые её приносят. <br/>
+            для этого я генерирую концепты¹ + раскапываю гипотезы² <br/>
+            + смотрю на AJTBD³, дальше → дизайню и пишу код ← <br/>
+            и наблюдаю за использованием этих продуктов ⁎
+        </p>
+    ),
+    label: "как я делаю"
+}, {
+    text: (
+        <p>
+            я успел поработать в icons8; создать самое разное (ниже); <br/>
+            а сейчас ⌁ строю gen-ai стартап ⌁ с друзьями <br/>
+            и ⁓ ищу парт-тайм ⁓
+        </p>
+    ),
+    label: "что я делаю"
+}, {
+    text: (
+        <p>
+            счастья
+        </p>
+    ),
+    label: "что я желаю"
+}]
 
 export default function Hero() {
     return (
-        <div className="flex flex-col gap-[32px] pt-[120px] pb-[60px] justify-center items-center">
-            <div className="flex flex-col items-center">
-                <h1>привет!</h1>
-                <h1>я андрей
-                    <span className="inline-flex pl-[8px] relative top-[5px]">
-                        <Image className="w-[36px] h-[36px] rounded-full" src="/me.png"
-                        alt="моё фото" width={36} height={36}></Image>
-                    </span>
-                , продуктовый дизайнер</h1>
+        <div className="flex flex-col gap-[20px] pt-[3px] pb-[13px]">
+            <div className="flex flex-row justify-between h-[26px] text-[#474747]">
+                <h1 className="self-center">привет! я андрей, продуктовый дизайнер</h1>
+
+                <h1 className="self-center">© 2024</h1>
+
+                <Link href="https://t.me/andrewlevada" target="_blank"
+                    className="self-center hover:text-[#2F3FD2]">
+                    <h1>написать мне ↗</h1>
+                </Link>
             </div>
             
-            <div className="flex flex-row gap-[8px] p-[8px] pl-[16px] items-center bg-[#F2E3D5] border border-[#684A2F] rounded-[16px] text-[16px]">
-                <p><span className="opacity-60">new:</span> сейчас я открыт к парт-тайму</p>
+            <div className="flex flex-row gap-[120px]">
+                {texts.map((item, i) => (
+                    <div className="flex flex-col gap-[21px] min-h-fit h-auto justify-between" key={i}>
+                        {item.text}
 
-                <Link href="https://t.me/andrewlevada" target="_blank">
-                    <Button>
-                        <p>Написать</p>
-                    </Button>
-                </Link>
+                        <p className="opacity-30">
+                            {item.label}
+                        </p>
+                    </div>
+                ))}
             </div>
         </div>
     )

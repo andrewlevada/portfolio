@@ -9,7 +9,7 @@ export default function Home() {
         <Hero/>
         <ImageSection images={uiAndGraphics}/>
 
-        <div className="flex flex-row justify-between w-full pt-[160px]">
+        <div className="flex flex-row flex-wrap justify-between w-full pt-[160px]">
           <h1>это всё, спасибо</h1>
           <h1>👈(ﾟヮﾟ👈)</h1>
         </div>

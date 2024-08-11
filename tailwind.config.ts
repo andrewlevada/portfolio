@@ -8,9 +8,11 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      
-    },
+    screens: {
+      "tiny": { "max": "700px" },
+      "m": { "max": "940px" },
+      "w": { "max": "1200px" }
+    }
   },
   plugins: [
     plugin(function({ addBase }) {

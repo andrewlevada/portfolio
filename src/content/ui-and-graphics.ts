@@ -1,12 +1,14 @@
 export interface ImageShowcase {
     src: string;
     alt: string;
+    link?: string;
     side: "left" | "right";
 }
 
 export const uiAndGraphics: ImageShowcase[] = [{
     src: "/content/illustration-generator-ui.png",
     alt: "интерфейс генератора иллюстраций",
+    link: "https://icons8.com/illustration-generator/new",
     side: "left"
 }, {
     src: "/content/neuroartist-gravity-email.png",
@@ -27,7 +29,13 @@ export const uiAndGraphics: ImageShowcase[] = [{
 }, {
     src: "/content/mega-creator-ui.png",
     alt: "мокапы интерфейса Мега Криейтора",
+    link: "https://icons8.com/mega-creator/new",
     side: "left"
+}, {
+    src: "/content/croissan-landing.png",
+    alt: "лендинг Croissan Studio",
+    link: "https://croissanstudio.ru",
+    side: "right"
 }, {
     src: "/content/ouch-illustration-modal.png",
     alt: "концепт страницы иллюстрации на ауче",

@@ -16,8 +16,7 @@ const neueMontrealFont = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Андрей",
-  description: "пишу...",
+  title: "Андрей"
 }
 
 export default function RootLayout({

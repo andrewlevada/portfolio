@@ -29,6 +29,20 @@ const texts = [{
     label: "что я желаю"
 }]
 
+const products = [{
+    name: "① НейроХудожник",
+    link: "https://neuroartist.ru"
+}, {
+    name: "② Illustration Generator",
+    link: "https://icons8.com/illustration-generator"
+}, {
+    name: "③ Ouch",
+    link: "https://icons8.com/illustrations"
+}, {
+    name: "④ Human Generator",
+    link: "https://generated.photos/human-generator"
+}]
+
 export default function Hero() {
     return (
         <div className="flex flex-col gap-[20px] pt-[3px] pb-[13px]">
@@ -53,6 +67,24 @@ export default function Hero() {
                         </p>
                     </div>
                 ))}
+            </div>
+
+            <div className="flex flex-col gap-[10px] mt-[3px] m:flex-col-reverse">
+                <div className="flex flex-row gap-x-[16px] gap-y-[6px] flex-wrap">
+                    {products.map((product, i) => (
+                        <Link href={product.link || "#"} target="_blank" key={i} className="hover:text-[#2F3FD2]">
+                            <p className="underline underline-offset-[3px] decoration-[#474747]/30">{product.name}</p>
+                        </Link>
+                    ))}
+
+                    <p className="underline underline-offset-[3px] decoration-[#474747]/30 opacity-50">
+                        ⑤ Coming soon
+                    </p>
+                </div>
+                
+                <p className="opacity-30">
+                    продукты, которые я дизайнил
+                </p>
             </div>
         </div>
     )

@@ -16,7 +16,7 @@ const texts = [{
             я успел поработать в icons8; <br className="hidden w:block m:!hidden"/>
             создать самое разное (ниже); <br className="m:hidden"/>
             а сейчас с друзьями ⌁ строю gen-ai стартап ⌁ <br className="m:hidden"/>
-            и ⁓ ищу парт-тайм ⁓
+            и ⁓ ищу следующее место работы ⁓
         </p>
     ),
     label: "что я делаю"

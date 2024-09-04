@@ -15,6 +15,10 @@ export const uiAndGraphics: ImageShowcase[] = [{
     alt: "иллюстрация для рассылки НейроХудожника",
     side: "right"
 }, {
+    src: "/content/whiteboard-widget.png",
+    alt: "концепт виджета, тренирующего дизайнеров для whiteboard челленджа",
+    side: "right"
+}, {
     src: "/content/origami-poster.png",
     alt: "постер оригами фактори: магазина наборов бумаги из Кореи и Японии",
     side: "right"

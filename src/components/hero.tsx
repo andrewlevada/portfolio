@@ -1,46 +1,14 @@
-import Link from "next/link";
+import ContactButton from "./contact-button";
 
-const texts = [{
-    text: (
-        <p>
-            я люблю создавать ценность и продукты, которые её приносят. <br className="m:hidden"/>
-            для этого я генерирую концепты¹ + раскапываю гипотезы² <br className="m:hidden"/>
-            + смотрю на AJTBD³, дальше → дизайню и пишу код ← <br className="m:hidden"/>
-            и наблюдаю за использованием этих продуктов ⁎
-        </p>
-    ),
-    label: "как я делаю"
+const jobs = [{
+    meta: "new • product designer",
+    text: "ищу следующую карьерную возможность ✨"
 }, {
-    text: (
-        <p>
-            я успел поработать в icons8; <br className="hidden w:block m:!hidden"/>
-            создать самое разное (ниже); <br className="m:hidden"/>
-            а сейчас с друзьями ⌁ строю gen-ai стартап ⌁ <br className="m:hidden"/>
-            и ⁓ ищу следующее место работы ⁓
-        </p>
-    ),
-    label: "что я делаю"
+    meta: "2024 - now • founding product designer",
+    text: "в стартапе croissan studio я первый product person, поэтому помимо обычных дизайн задач, я выстраиваю продуктовую стратегию"
 }, {
-    text: (
-        <p>
-            счастья
-        </p>
-    ),
-    label: "что я желаю"
-}]
-
-const products = [{
-    name: "① НейроХудожник",
-    link: "https://neuroartist.ru"
-}, {
-    name: "② Illustration Generator",
-    link: "https://icons8.com/illustration-generator"
-}, {
-    name: "③ Ouch",
-    link: "https://icons8.com/illustrations"
-}, {
-    name: "④ Human Generator",
-    link: "https://generated.photos/human-generator"
+    meta: "2022 - 2024 • product designer + owner",
+    text: "в icons8 я отвечал за пользовательский опыт сразу в нескольких продуктах из одной экосистемы с MAU 1M+, а так же создавалл продукты с нуля"
 }]
 
 export default function Hero() {
@@ -51,40 +19,51 @@ export default function Hero() {
 
                 <h1 className="self-center w:hidden">© 2024</h1>
 
-                <Link href="https://t.me/andrewlevada" target="_blank"
-                    className="self-center hover:text-[#2F3FD2] m:text-[#474747]/60 m:self-start">
-                    <h1>написать мне ↗</h1>
-                </Link>
+                <ContactButton />
             </div>
-            
-            <div className="flex flex-row gap-[120px] m:flex-col m:gap-[20px] m:items-start w:gap-[40px]">
-                {texts.map((item, i) => (
-                    <div className="flex flex-col gap-[21px] min-w-fit min-h-fit h-auto justify-between m:flex-row-reverse m:gap-[10px] m:justify-normal"key={i}>
-                        {item.text}
 
-                        <p className="opacity-30 m:min-w-[60px] m:w-[60px]">
-                            {item.label}
+            <div className="flex flex-row gap-[100px] m:flex-col m:items-start w:gap-[50px] m:!gap-[30px]">
+                <div className="flex flex-col gap-[2px] min-w-fit min-h-fit h-auto justify-between m:flex-row-reverse m:gap-[10px] m:justify-normal">
+                    <div >
+                        <p>
+                            я люблю создавать ценность и продукты, которые её приносят.
+                        </p>
+
+                        <p className="opacity-40 mt-[9px]">
+                            чтобы делать это эффективно, я
+                        </p>
+
+                        <p>
+                            ① изучаю флоу с точки зрения AJTBD <br />
+                            ② генерирую концепты и заворачиваю их в проверяемые гипотезы <br />
+                            ③ а дальше дизайню, сверяясь с пользовательским фидбеком <br />
                         </p>
                     </div>
-                ))}
-            </div>
 
-            <div className="flex flex-col gap-[10px] mt-[3px] m:flex-col-reverse">
-                <div className="flex flex-row gap-x-[16px] gap-y-[6px] flex-wrap">
-                    {products.map((product, i) => (
-                        <Link href={product.link || "#"} target="_blank" key={i} className="hover:text-[#2F3FD2]">
-                            <p className="underline underline-offset-[3px] decoration-[#474747]/30">{product.name}</p>
-                        </Link>
-                    ))}
-
-                    <p className="underline underline-offset-[3px] decoration-[#474747]/30 opacity-50">
-                        ⑤ Coming soon
+                    <p className="italic opacity-40 mt-[17px] m:min-w-[60px] m:w-[60px] m:mt-0">
+                        как я создаю
                     </p>
                 </div>
-                
-                <p className="opacity-30">
-                    продукты, которые я дизайнил
-                </p>
+
+                <div className="flex flex-col gap-[4px] min-w-fit min-h-fit h-auto justify-between m:flex-row-reverse m:gap-[10px] m:justify-normal">
+                    <div className="flex flex-col gap-[11px]">
+                        {jobs.map((job, i) => (
+                            <div className="max-w-[480px] w:max-w-[400px]" key={i}>
+                                <p className="opacity-40">
+                                    {job.meta}
+                                </p>
+
+                                <p>
+                                    {job.text}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <p className="italic opacity-40 mt-[17px] m:min-w-[60px] m:w-[60px] m:mt-0">
+                        что я делал
+                    </p>
+                </div>
             </div>
         </div>
     )

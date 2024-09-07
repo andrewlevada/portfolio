@@ -27,10 +27,6 @@ export const uiAndGraphics: ImageShowcase[] = [{
     alt: "мокап концепта интерфейса НейроХудожника",
     side: "left"
 }, {
-    src: "/content/empty-postcard.png",
-    alt: "концепт приложения для создания открыток",
-    side: "right"
-}, {
     src: "/content/mega-creator-ui.png",
     alt: "мокапы интерфейса Мега Криейтора",
     link: "https://icons8.com/mega-creator/new",

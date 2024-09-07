@@ -1,3 +1,4 @@
+import ContactButton from "@/components/contact-button";
 import Hero from "@/components/hero";
 import ImageSection from "@/components/image-section";
 import { uiAndGraphics } from "@/content/ui-and-graphics";
@@ -11,7 +12,7 @@ export default function Home() {
 
         <div className="flex flex-row flex-wrap justify-between w-full pt-[160px]">
           <h1>это всё, спасибо</h1>
-          <h1>👈(ﾟヮﾟ👈)</h1>
+          <ContactButton />
         </div>
       </div>
     </main>

@@ -1,11 +1,11 @@
-export interface ImageShowcase {
+export interface Shot {
     src: string;
     alt: string;
     link?: string;
     side: "left" | "right";
 }
 
-export const uiAndGraphics: ImageShowcase[] = [{
+export const shots: Shot[] = [{
     src: "/content/illustration-generator-ui.png",
     alt: "интерфейс генератора иллюстраций",
     link: "https://icons8.com/illustration-generator/new",
@@ -22,10 +22,6 @@ export const uiAndGraphics: ImageShowcase[] = [{
     src: "/content/origami-poster.png",
     alt: "постер оригами фактори: магазина наборов бумаги из Кореи и Японии",
     side: "right"
-}, {
-    src: "/content/neuroartist-tags-concept.png",
-    alt: "мокап концепта интерфейса НейроХудожника",
-    side: "left"
 }, {
     src: "/content/mega-creator-ui.png",
     alt: "мокапы интерфейса Мега Криейтора",

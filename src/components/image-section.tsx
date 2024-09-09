@@ -1,12 +1,8 @@
-import { ImageShowcase } from "@/content/ui-and-graphics";
 import Image from "next/image";
 import Link from "next/link";
+import { Shot, shots } from "@/content/shots";
 
-export interface ImageSectionProps {
-    images: ImageShowcase[];
-}
-
-function Item({ item } : { item: ImageShowcase }) {
+function Item({ item } : { item: Shot }) {
     return (
         <div className="relative">
             <Image className="w-full h-auto rounded-[16px]" src={item.src} alt={item.alt} width={586} height={586} />
@@ -23,19 +19,19 @@ function Item({ item } : { item: ImageShowcase }) {
     )
 }
 
-export default function ImageSection({ images }: ImageSectionProps) {
+export default function ImageSection() {
     return (
         <div className="flex flex-row gap-[8px]">
             {["left", "right"].map(side => (
                 <div className="flex flex-col gap-[8px] w-[calc((100vw-48px)/2)] tiny:hidden" key={side}>
-                    {images.filter(item => item.side === side).map(item => (
+                    {shots.filter(item => item.side === side).map(item => (
                         <Item item={item} key={item.src} />
                     ))}
                 </div>
             ))}
 
             <div className="hidden tiny:flex flex-col gap-[8px] ">
-                {images.map(item => (
+                {shots.map(item => (
                     <Item item={item} key={item.src} />
                 ))}
             </div>

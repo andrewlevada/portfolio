@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .text-link {
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.2);
+    text-underline-offset: 2.5px;
+    transition: text-decoration-color 100ms ease-in-out;
+  }
+
+  .text-link:hover {
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .text-link:active {
+    text-decoration-color: rgba(0, 0, 0, 0.9);
+  }  
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

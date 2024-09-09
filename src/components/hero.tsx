@@ -1,15 +1,5 @@
 import ContactButton from "./contact-button";
-
-const jobs = [{
-    meta: "new • product designer",
-    text: "ищу следующую карьерную возможность ✨"
-}, {
-    meta: "2024 - now • founding product designer",
-    text: "в стартапе croissan studio я первый product person, поэтому помимо обычных дизайн задач, я выстраиваю продуктовую стратегию"
-}, {
-    meta: "2022 - 2024 • product designer + owner",
-    text: "в icons8 я отвечал за пользовательский опыт сразу в нескольких продуктах из одной экосистемы с MAU 1M+, а так же создавалл продукты с нуля"
-}]
+import { jobs } from "../content/jobs";
 
 export default function Hero() {
     return (
@@ -24,7 +14,7 @@ export default function Hero() {
 
             <div className="flex flex-row gap-[100px] m:flex-col m:items-start w:gap-[50px] m:!gap-[30px]">
                 <div className="flex flex-col gap-[2px] min-w-fit min-h-fit h-auto justify-between m:flex-row-reverse m:gap-[10px] m:justify-normal">
-                    <div >
+                    <div>
                         <p>
                             я люблю создавать ценность и продукты, которые её приносят.
                         </p>
@@ -34,9 +24,9 @@ export default function Hero() {
                         </p>
 
                         <p>
-                            ① изучаю флоу с точки зрения AJTBD <br />
+                            ① изучаю флоу через AJTBD <br />
                             ② генерирую концепты и заворачиваю их в проверяемые гипотезы <br />
-                            ③ а дальше дизайню, сверяясь с пользовательским фидбеком <br />
+                            ③ а дальше прототипикую и дизайню, сверяясь с пользовательским фидбеком <br />
                         </p>
                     </div>
 
@@ -48,14 +38,13 @@ export default function Hero() {
                 <div className="flex flex-col gap-[4px] min-w-fit min-h-fit h-auto justify-between m:flex-row-reverse m:gap-[10px] m:justify-normal">
                     <div className="flex flex-col gap-[11px]">
                         {jobs.map((job, i) => (
-                            <div className="max-w-[480px] w:max-w-[400px]" key={i}>
+                            <div className="max-w-[520px] w:max-w-[400px]" key={i}>
                                 <p className="opacity-40">
                                     {job.meta}
                                 </p>
+                                
 
-                                <p>
-                                    {job.text}
-                                </p>
+                                {job.text}
                             </div>
                         ))}
                     </div>

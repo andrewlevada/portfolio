@@ -9,10 +9,10 @@ export default function CasesSection() {
                 <h1 className="opacity-20">описание процесса work in progress</h1>  
             </div>
             
-            <div className="grid grid-cols-3 gap-[8px] m:flex m:flex-col m:gap-[33px]">
+            <div className="grid grid-cols-3 gap-x-[8px] gap-y-[40px] w:grid-cols-2 tiny:!grid-cols-1">
                 {cases.map((item, index) => (
                     <div key={index} className="flex flex-col gap-[17px] min-h-full justify-between">
-                        <div className="flex flex-col gap-[3px] mr-[60px]">
+                        <div className="flex flex-col gap-[3px] mr-[60px] tiny:mr-0">
                             <p className="opacity-40">{item.context}</p>
                             <p>{item.task} → {item.result}</p>
                         </div>

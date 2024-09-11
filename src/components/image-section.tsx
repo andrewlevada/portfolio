@@ -4,14 +4,19 @@ import { Shot, shots } from "@/content/shots";
 
 function Item({ item } : { item: Shot }) {
     return (
-        <div className="relative">
+        <div className="flex flex-col gap-[10px] relative">
             <Image className="w-full h-auto rounded-[16px]" src={item.src} alt={item.alt} width={586} height={586} />
 
-            {item.link ? (
-                <Link href={item.link} target="_blank">
-                    <div className="w-[40px] h-[40px] rounded-[8px] flex justify-center items-center absolute bottom-[8px] right-[8px] 
-                    bg-[#202020] hover:bg-[#303030] active:bg-[#404040]">
-                        <Image className="opacity-90" src="/arrow.svg" width={24} height={24} alt="стрелочка"/>
+            {item.live ? (
+                <Link href={item.live.href} target="_blank">
+                    <div className="flex flex-row gap-[10px] justify-center w-full mb-[12px] hover:text-[#2F3FD2]">
+                        <p className="text-inherit">
+                            {item.live.text} ↗
+                        </p>
+                        
+                        <p className="opacity-50 text-black">
+                            {item.live.annotation}
+                        </p>
                     </div>
                 </Link>
             ) : ""}

@@ -1,15 +1,23 @@
 export interface Shot {
     src: string;
     alt: string;
-    link?: string;
     side: "left" | "right";
+    live?: {
+        text: string;
+        href: string;
+        annotation: string;
+    };
 }
 
 export const shots: Shot[] = [{
     src: "/content/illustration-generator-ui.png",
     alt: "интерфейс генератора иллюстраций",
-    link: "https://icons8.com/illustration-generator/new",
-    side: "left"
+    side: "left",
+    live: {
+        text: "illustration generator",
+        href: "https://icons8.com/illustration-generator/new",
+        annotation: "спроектировал"
+    }
 }, {
     src: "/content/neuroartist-gravity-email.png",
     alt: "иллюстрация для рассылки НейроХудожника",
@@ -25,13 +33,21 @@ export const shots: Shot[] = [{
 }, {
     src: "/content/mega-creator-ui.png",
     alt: "мокапы интерфейса Мега Криейтора",
-    link: "https://icons8.com/mega-creator/new",
-    side: "left"
+    side: "left",
+    live: {
+        text: "mega creator editor",
+        href: "https://icons8.com/mega-creator/new",
+        annotation: "мейнтейнил и развивал ux и ui"
+    }
 }, {
     src: "/content/croissan-landing.png",
     alt: "лендинг Croissan Studio",
-    link: "https://croissanstudio.ru",
-    side: "right"
+    side: "right",
+    live: {
+        text: "croissan studio landing",
+        href: "https://croissanstudio.ru",
+        annotation: "задизайнил и сверстал"
+    }
 }, {
     src: "/content/ouch-illustration-modal.png",
     alt: "концепт страницы иллюстрации на ауче",

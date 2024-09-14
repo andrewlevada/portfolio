@@ -22,13 +22,13 @@ export const cases: Case[] = [{
     imageSrc: "/content/mega-creator-ux-fixes.png",
 }, {
     context: "в ии-инструменте human generator",
-    task: "спроектировал продукт с нуля до 100000 MAU",
+    task: "спроектировал продукт с нуля до 200 000 MAU",
     result: "успешно запустились",
     imageSrc: "/content/human-generator-launch.png",
 }, {
     context: "в редакторе коллажей mega creator",
-    task: "написал прототип 3D интеракций в 2D редакторе",
-    result: "синхронизировал команду по тому, как нужно делать эту фичу",
+    task: "написал прототип 3D интеракций",
+    result: "вдохновил команду на эту фичу и передал контекст по тому, как она должна ощущаться",
     imageSrc: "/content/mega-creator-3d.png",
 }, {
     context: "для университета иннополис",

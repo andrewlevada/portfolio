@@ -35,9 +35,9 @@ export const shots: Shot[] = [{
     alt: "мокапы интерфейса Мега Криейтора",
     side: "left",
     live: {
-        text: "mega creator editor",
+        text: "mega creator",
         href: "https://icons8.com/mega-creator/new",
-        annotation: "мейнтейнил и развивал ux и ui"
+        annotation: "мейнтейнил и развивал ui"
     }
 }, {
     src: "/content/croissan-landing.png",

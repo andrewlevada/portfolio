@@ -33,7 +33,7 @@ export const jobs: Job[] = [{
             <Link className="text-link" href="https://icons8.com/mega-creator" target="_blank">mega creator</Link> {}
             на новый уровень. 
 
-            спроектировал 3 новых продукта продукта — генераторы {}
+            спроектировал 3 новых продукта — генераторы {}
             <Link className="text-link" href="https://icons8.com/illustration-generator" target="_blank">иллюстраций</Link>, {}
             <Link className="text-link" href="https://generated.photos/human-generator" target="_blank">людей</Link> и {}
             <Link className="text-link" href="https://icons8.com/threedio" target="_blank">сток 3D моделей</Link>. {}

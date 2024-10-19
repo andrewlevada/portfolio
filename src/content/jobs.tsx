@@ -6,9 +6,9 @@ export interface Job {
 }
 
 export const jobs: Job[] = [{
-    meta: "new • product designer",
+    meta: "2024 - now • product designer @ aviasales",
     text: (
-        <p>ищу следующую карьерную возможность ✨</p>
+        <p>just started! will be doing some awesome ux</p>
     )
 }, {
     meta: "2024 - now • founding product designer @ croissan studio",
